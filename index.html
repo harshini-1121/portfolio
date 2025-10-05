@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Harshini T.N | Portfolio</title>
+    <title>Harshini TN | Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -163,7 +163,7 @@
         }
         
         .hero-content {
-            max-width: 600px;
+            max-width: 800px;
             z-index: 1;
         }
         
@@ -174,13 +174,12 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-
+        
         .hero p {
             font-size: 1.2rem;
             margin-bottom: 30px;
             color: var(--text-muted);
         }
-        
         
         .hero-btns {
             display: flex;
@@ -196,6 +195,13 @@
         .btn-outline:hover {
             background: var(--primary);
             color: white;
+        }
+        
+        .hero-icon {
+            font-size: 5rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+            opacity: 0.8;
         }
         
         /* About Section */
@@ -249,26 +255,33 @@
             color: var(--text-muted);
         }
         
-        .about-image {
-            position: relative;
+        .about-features {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
         }
         
-        .about-image img {
-            width: 100%;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        .feature-box {
+            background: var(--dark-light);
+            padding: 25px;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s ease;
         }
         
-        .about-image::before {
-            content: '';
-            position: absolute;
-            top: -20px;
-            left: -20px;
-            width: 100%;
-            height: 100%;
-            border: 2px solid var(--primary);
-            border-radius: 20px;
-            z-index: -1;
+        .feature-box:hover {
+            transform: translateY(-5px);
+        }
+        
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+        
+        .feature-box h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
         }
         
         /* Education Section */
@@ -326,7 +339,7 @@
         
         .timeline-content {
             background: var(--dark);
-            padding: 20px;
+            padding: 25px;
             border-radius: 10px;
             box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
             width: 100%;
@@ -353,6 +366,12 @@
             color: var(--text-muted);
             font-size: 0.9rem;
             margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .timeline-content .date i {
+            margin-right: 8px;
         }
         
         .timeline-content p {
@@ -362,7 +381,7 @@
         .timeline-content::before {
             content: '';
             position: absolute;
-            top: 20px;
+            top: 25px;
             right: -10px;
             width: 20px;
             height: 20px;
@@ -412,7 +431,7 @@
         }
         
         .project-content {
-            padding: 20px;
+            padding: 25px;
         }
         
         .project-content h3 {
@@ -458,10 +477,6 @@
         }
         
         /* Skills Section */
-        .skills {
-            background: var(--dark-light);
-        }
-        
         .skills-container {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -469,7 +484,7 @@
         }
         
         .skill-category {
-            background: var(--dark);
+            background: var(--dark-light);
             padding: 25px;
             border-radius: 15px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
@@ -681,6 +696,10 @@
                 flex-direction: column;
                 align-items: flex-start;
             }
+            
+            .about-features {
+                grid-template-columns: 1fr;
+            }
         }
         
         @media (max-width: 576px) {
@@ -702,7 +721,7 @@
     <!-- Header -->
     <header>
         <div class="container header-container">
-            <a href="#" class="logo">Harshini.<span> T.N</span></a>
+            <a href="#" class="logo">Harshini<span>TN</span></a>
             <div class="menu-btn">
                 <i class="fas fa-bars"></i>
             </div>
@@ -720,6 +739,9 @@
     <section class="hero">
         <div class="container">
             <div class="hero-content">
+                <div class="hero-icon">
+                    <i class="fas fa-laptop-code"></i>
+                </div>
                 <h1>Hi, I'm Harshini 👋</h1>
                 <p>A motivated MSc student in Decision and Computing Sciences at Coimbatore Institute of Technology, passionate about building AI-driven solutions and seeking internship opportunities.</p>
                 <div class="hero-btns">
@@ -740,8 +762,35 @@
                     <p>My academic journey has equipped me with a strong foundation in computational thinking, data analysis, and problem-solving skills. I'm constantly exploring new technologies and methodologies to enhance my capabilities.</p>
                     <a href="#contact" class="btn">Let's Connect</a>
                 </div>
-                <div class="about-image">
-                    <img src="profilepic.jpg" alt="Harshini TN">
+                <div class="about-features">
+                    <div class="feature-box">
+                        <div class="feature-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3>AI & ML</h3>
+                        <p>Passionate about AI-driven solutions</p>
+                    </div>
+                    <div class="feature-box">
+                        <div class="feature-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3>Development</h3>
+                        <p>Full-stack development skills</p>
+                    </div>
+                    <div class="feature-box">
+                        <div class="feature-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>Data Analysis</h3>
+                        <p>Strong analytical capabilities</p>
+                    </div>
+                    <div class="feature-box">
+                        <div class="feature-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h3>Innovation</h3>
+                        <p>Creative problem-solving approach</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -755,16 +804,17 @@
                 <div class="timeline-item">
                     <div class="timeline-content">
                         <h3>Coimbatore Institute of Technology</h3>
-                        <div class="date">2023 – Present</div>
+                        <div class="date"><i class="far fa-calendar-alt"></i> 2023 – Present</div>
                         <p>Integrated MSc in Decision & Computing Sciences</p>
-                        <p>Current CGPA: 8.4</p>
+                        <p><strong>Current CGPA: 8.4</strong></p>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-content">
                         <h3>RJ Matriculation Higher Secondary School</h3>
-                        <div class="date">2021–2023</div>
-                        <p>Score: 80%</p>
+                        <div class="date"><i class="far fa-calendar-alt"></i> 2021–2023</div>
+                        <p>Completed Higher Secondary Education</p>
+                        <p><strong>Score: 80%</strong></p>
                     </div>
                 </div>
             </div>
@@ -852,15 +902,17 @@
                         <span class="skill-item">JavaScript</span>
                         <span class="skill-item">Java</span>
                         <span class="skill-item">SQL</span>
+                        <span class="skill-item">HTML/CSS</span>
                     </div>
                 </div>
                 <div class="skill-category">
                     <h3>Web Technologies</h3>
                     <div class="skill-list">
-                        <span class="skill-item">HTML/CSS</span>
                         <span class="skill-item">React</span>
                         <span class="skill-item">Node.js</span>
                         <span class="skill-item">Express</span>
+                        <span class="skill-item">REST APIs</span>
+                        <span class="skill-item">MongoDB</span>
                     </div>
                 </div>
                 <div class="skill-category">
@@ -870,6 +922,7 @@
                         <span class="skill-item">Data Analysis</span>
                         <span class="skill-item">Statistical Modeling</span>
                         <span class="skill-item">Data Visualization</span>
+                        <span class="skill-item">Pandas</span>
                     </div>
                 </div>
                 <div class="skill-category">
@@ -877,8 +930,9 @@
                     <div class="skill-list">
                         <span class="skill-item">Git</span>
                         <span class="skill-item">MySQL</span>
-                        <span class="skill-item">MongoDB</span>
                         <span class="skill-item">Linux</span>
+                        <span class="skill-item">Jupyter</span>
+                        <span class="skill-item">VS Code</span>
                     </div>
                 </div>
             </div>
@@ -999,6 +1053,4 @@
         });
     </script>
 </body>
-
-</html><!DOCTYPE html>
-
+</html>
